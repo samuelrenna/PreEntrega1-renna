@@ -47,7 +47,7 @@ const simuladorBtn = document.getElementById("inicio");
                 razaPersonaje = prompt("Por favor, elige una raza válida para tu perro: bulldog, doberman o poodle");
             }
         } else if (personaje1 === "gato") {
-            razaPersonaje = prompt("Elige la raza de tu gato: siamés, persa, montés");
+            razaPersonaje = prompt("Elige la raza de tu gato: siames, persa, montes");
             while (razaPersonaje !== "siames" && razaPersonaje !== "persa" && razaPersonaje !== "montes") {
                 razaPersonaje = prompt("Por favor, elige una raza válida para tu gato: siamés, persa o montés");
             }
