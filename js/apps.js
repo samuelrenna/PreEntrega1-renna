@@ -84,7 +84,7 @@ simuladorBtn.addEventListener("click", function() {
             mensaje += " - Fuerza: 5\n";
             mensaje += " - Agilidad: 6\n";
         } else {
-            mensaje += "Raza de personaje desconocida";
+            mensaje += "Como llegaste hasta aca???";
         }
     
         alert(mensaje);
