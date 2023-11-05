@@ -37,24 +37,25 @@ const simuladorBtn = document.getElementById("inicio");
     }
 
     let personaje1;
-    
+
     do {
-        personaje1 = prompt("Elige tu tipo de personaje: perro o gato");
+        personaje1 = prompt("Elige tu tipo de personaje: perro o gato").toLowerCase();
     
         if (personaje1 === "perro") {
-            razaPersonaje = prompt("Elige la raza de tu perro: bulldog, doberman o poodle");
+            razaPersonaje = prompt("Elige la raza de tu perro: bulldog, doberman o poodle").toLowerCase();
             while (razaPersonaje !== "bulldog" && razaPersonaje !== "doberman" && razaPersonaje !== "poodle") {
-                razaPersonaje = prompt("Por favor, elige una raza válida para tu perro: bulldog, doberman o poodle");
+                razaPersonaje = prompt("Por favor, elige una raza válida para tu perro: bulldog, doberman o poodle").toLowerCase();
             }
         } else if (personaje1 === "gato") {
-            razaPersonaje = prompt("Elige la raza de tu gato: siames, persa, montes");
+            razaPersonaje = prompt("Elige la raza de tu gato: siames, persa, montes").toLowerCase();
             while (razaPersonaje !== "siames" && razaPersonaje !== "persa" && razaPersonaje !== "montes") {
-                razaPersonaje = prompt("Por favor, elige una raza válida para tu gato: siamés, persa o montés");
+                razaPersonaje = prompt("Por favor, elige una raza válida para tu gato: siames, persa o montes").toLowerCase();
             }
         } else {
-            alert("Por favor, elige un tipo de personaje válido (perro o gato).");
+            alert("Por favor, elige un tipo de personaje válido (perro o gato)");
         }
     } while (personaje1 !== "perro" && personaje1 !== "gato");
+    
     
     function mostrarInformacionPersonaje(nombre, nombreUsuario, razaPersonaje) {
         let mensaje = "Hola " + nombre + " aca te dejamos la informacion completa de tu cuenta \n\n";
