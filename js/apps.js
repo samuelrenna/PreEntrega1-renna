@@ -1,9 +1,11 @@
 const simuladorBtn = document.getElementById("inicio");
-simuladorBtn.addEventListener("click", function() {
+
+    simuladorBtn.addEventListener("click", function() {
 
     function esNombrePersonaValido(nombre) {
         return /^[A-Za-z\s]+$/.test(nombre);
     }
+    
     let nombreIngresado;
     let nombreUsuario;
     let razaPersonaje;
@@ -17,8 +19,13 @@ simuladorBtn.addEventListener("click", function() {
         } else if (!esNombrePersonaValido(nombreIngresado)) {
             alert("Por favor, ingresa un nombre válido sin números ni caracteres especiales.");
         }
-    } while (!nombreIngresado || !esNombrePersonaValido(nombreIngresado));
 
+    } while (!nombreIngresado || !esNombrePersonaValido(nombreIngresado));
+    
+    alert("Hola " + nombreIngresado + ", bienvenido.");
+    
+    nombreUsuario = prompt(nombreIngresado + ", ahora crea tu nombre de usuario:");
+    
     while (!nombreUsuario) {
         alert("Por favor, ingresa un nombre de usuario válido. El campo no puede quedar vacío.");
         nombreUsuario = prompt(nombreIngresado + ", ahora crea tu nombre de usuario:");
@@ -30,10 +37,10 @@ simuladorBtn.addEventListener("click", function() {
     }
 
     let personaje1;
-
+    
     do {
         personaje1 = prompt("Elige tu tipo de personaje: perro o gato");
-
+    
         if (personaje1 === "perro") {
             razaPersonaje = prompt("Elige la raza de tu perro: bulldog, doberman o poodle");
             while (razaPersonaje !== "bulldog" && razaPersonaje !== "doberman" && razaPersonaje !== "poodle") {
@@ -48,7 +55,7 @@ simuladorBtn.addEventListener("click", function() {
             alert("Por favor, elige un tipo de personaje válido (perro o gato).");
         }
     } while (personaje1 !== "perro" && personaje1 !== "gato");
-
+    
     function mostrarInformacionPersonaje(nombre, nombreUsuario, razaPersonaje) {
         let mensaje = "Hola " + nombre + " aca te dejamos la informacion completa de tu cuenta \n\n";
         mensaje += "Nombre de usuario: " + nombreUsuario + "\n";
@@ -84,12 +91,12 @@ simuladorBtn.addEventListener("click", function() {
             mensaje += " - Fuerza: 5\n";
             mensaje += " - Agilidad: 6\n";
         } else {
-            mensaje += "Como llegaste hasta aca???";
+            mensaje += "Raza de personaje desconocida";
         }
     
         alert(mensaje);
     }
     
     mostrarInformacionPersonaje(nombreIngresado, nombreUsuario, razaPersonaje);
-
+    
 });
